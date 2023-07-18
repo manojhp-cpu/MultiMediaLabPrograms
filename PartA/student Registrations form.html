@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration form</title>
+    <script >function validateForm() {
+        let form = document.StudentRegistrationForm;
+        if (form.sname.value == "") {
+          alert("Please enter Username");
+          form.student_name.focus();
+          return false;
+        }
+        if (
+          StudentRegistrationForm.Gender[0].checked == false &&
+          StudentRegistrationForm.Gender[1].checked == false
+        ) {
+          alert("Select Your Gender:Male or Female");
+          return false;
+        }
+        if (form.Add.value == "") {
+          alert("Please Provide Your Address");
+      
+          return false;
+        }
+        if (form.Dob.value == "") {
+          alert("Please Provide Your Date Of Birth");
+      
+          return false;
+        }
+        if (
+          StudentRegistrationForm.reli[0].checked == false &&
+          StudentRegistrationForm.reli[1].checked == false &&
+          StudentRegistrationForm.reli[2].checked == false
+        ) {
+          alert("Select Your Relegion");
+          return false;
+        }
+      
+        if (form.P_no.value == "") {
+          alert("Please Enter your Mobile Number");
+      
+          return false;
+        }
+        if (form.E_id.value == "") {
+          alert("Please Enter your E-mail ID");
+      
+          return false;
+        } else {
+          alert("Form Succesfully Submitted");
+          window.location.reload();
+          return true;
+        }
+      }
+      </script>
+    
+</head>
+
+<body style="padding-top: 100px;">
+    <form action="" name="StudentRegistrationForm" onsubmit="return validateForm();">
+        <table align="center" border="2px">
+            <tr >
+                <th colspan="2">Student Registration form</th>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" name="sname" 
+                    placeholder="Username">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="Gender" id="">Male
+                    <input type="radio" name="Gender" id="">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="Add" id="TA-add" 
+                    cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" name="Dob" id=""></td>
+            </tr>
+            <tr>
+                <td>Relegion</td>
+                <td>
+                    <input type="radio" name="reli" id="">Hindu
+                    <input type="radio" name="reli" id="">Christian
+                    <input type="radio" name="reli" id="">Islam
+                </td>
+            </tr>
+            <tr>
+                <td>PhoneNumber</td>
+                <td><input type="text" name="P_no" id=""></td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td><input type="email" name="E_id" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="" id="">
+                    <input type="reset" name="" id="">
+                </td>
+
+            </tr>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

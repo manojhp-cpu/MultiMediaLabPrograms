@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform and Transition</title>
+    <style>
+        #demo {
+            width: 100px;
+            height: 100px;
+            background-color: #78ecd8;
+            transition: width 2s ,height 2s, transform 2s;
+            
+        }
+    </style>
+    <script>
+        function move() {
+            document.getElementById('demo').style.transform = "translate(400px,50px)";
+            document.getElementById('demo').style.width = "400px";
+            document.getElementById('demo').style.height = "200px";
+        }
+    </script>
+</head>
+
+<body onload="move()">
+    <h1 align="center">MIT</h1>
+    <hr color="red" size="3px">
+    <div id="demo"></div>
+</body>
+
+</html>
