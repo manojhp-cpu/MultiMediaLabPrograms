@@ -1,0 +1,26 @@
+<!--4. Write an HTML program to 
+    draw bezier curve using canvas tag and JavaScript-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+        }
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
+        ctx.stroke();
+      }
+    </script>
+  </head>
+  <body onload="draw()">
+    <canvas id="canvas" width="220" height="220"></canvas>
+  </body>
+</html>

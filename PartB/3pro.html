@@ -1,0 +1,37 @@
+<!--3.Write an HTML program to draw square and rectangle using canvas tag and
+javascript-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Rectangle -->
+  <h1>Rectangle</h1>
+  <canvas id="rectangleCanvas">Your browser does not support the canvas tag.</canvas>
+  <script>
+    var rectangleCanvas = document.getElementById("rectangleCanvas");
+    var rectangleCtx = rectangleCanvas.getContext("2d");
+    rectangleCtx.fillStyle = "#FF0000";
+    rectangleCtx.fillRect(0, 0, 180, 80);
+  </script>
+
+  <br /><br />
+
+  <!-- Square -->
+  <h1>Square</h1>
+  <canvas id="squareCanvas">Your browser does not support the canvas tag.</canvas>
+  <script>
+    var squareCanvas = document.getElementById("squareCanvas");
+    var squareCtx = squareCanvas.getContext("2d");
+    squareCtx.fillStyle = "#FF3456";
+    squareCtx.fillRect(0, 0, 80, 80);
+  </script>
+</body>
+
+</html>

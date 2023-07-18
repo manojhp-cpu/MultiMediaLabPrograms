@@ -1,0 +1,29 @@
+<!--Program 5 Write an HTML Program to import an external image into a canvas and then to
+draw on that image-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Image to use:</p>
+    <img id="MIT" width="220" height="277" src="download.jpeg" alt="The MIT">
+    <p>Canvas:</p>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #00ff00;">
+        Your browser does not support the HTML5 canvas tag. </canvas>
+    <script>
+        window.onload = function () {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("MIT");
+            ctx.drawImage(img, 0, 0, 500, 500)
+        }
+    </script>
+</body>
+
+</html>

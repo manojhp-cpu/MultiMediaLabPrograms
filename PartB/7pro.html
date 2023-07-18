@@ -1,0 +1,31 @@
+<!--7.7. Write an html program to draw a circle using canvas and to apply the rotations
+animations on loading the page-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="500" style="border:1px solid red;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(300, 50, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        const myInterval = setInterval(ani, 3000);
+        function ani() {
+            ctx.rotate(20 * Math.PI / 180);
+            ctx.arc(300, 50, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+    </script>
+</body>
+
+</html>
